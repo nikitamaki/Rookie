@@ -20,6 +20,10 @@ body {
     line-height: 100px;
     font-size: xx-large;
 }
+.red:hover {
+    box-shadow: 0 0 55px rgb(255, 86, 86);
+    color: rgb(249, 28, 28);
+}
 .orange {
     width: 100px;
     height: 100px;
@@ -31,6 +35,10 @@ body {
     margin:20px 0;
     font-size: xx-large;
 }
+.orange:hover {
+    box-shadow: 0 0 55px rgb(255, 185, 86);
+    color: orange;
+}
 .green {
     width: 100px;
     height: 100px;
@@ -41,4 +49,7 @@ body {
     line-height: 100px;
     font-size: xx-large;
 }
-
+.green:hover {
+   box-shadow: 0 0 55px greenyellow; 
+   color: green;
+}
