@@ -3,26 +3,38 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight:600;
 }
-.body { 
+body .container {
+    display: flex;
+}
+body .row {
+    margin: 50px auto;
+}
+.body, .body-1, .body-2 { 
     background: black;
     width: 100px;
     padding: 20px;
     border-radius: 70px;
-    margin: 50px auto;
 }
 .red {
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    background-color: red;
+    background-color: rgb(182, 0, 0);
     text-align: center;
     vertical-align: middle;
     line-height: 100px;
     font-size: xx-large;
 }
-.red:hover {
-    box-shadow: 0 0 55px rgb(255, 86, 86);
+.body-1 .red:hover {
+    box-shadow: 0 0 35px rgb(255, 81, 81);
+    background: red;
     color: rgb(249, 28, 28);
+}
+.body div.red {
+    animation-name: redlight;
+    animation-duration: 6s;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
 }
 .orange {
     width: 100px;
@@ -35,9 +47,16 @@ body {
     margin:20px 0;
     font-size: xx-large;
 }
-.orange:hover {
-    box-shadow: 0 0 55px rgb(255, 185, 86);
-    color: orange;
+.body div.orange {
+    animation-name: orangelight;
+    animation-duration: 6s;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+}
+.body-1 .orange:hover {
+    box-shadow: 0 0 35px yellow;
+    background: yellow;
+    color: yellow;
 }
 .green {
     width: 100px;
@@ -49,7 +68,69 @@ body {
     line-height: 100px;
     font-size: xx-large;
 }
-.green:hover {
-   box-shadow: 0 0 55px greenyellow; 
-   color: green;
+.body div.green {
+    animation-name: greenlight;
+    animation-duration: 6s;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+}
+.body-1 .green:hover {
+   box-shadow: 0 0 35px greenyellow; 
+   color: greenyellow;
+   background: greenyellow;
+}
+/* ----------Traffic Light Animation-------- */
+@keyframes redlight {
+    0%,33% {background: rgb(182, 0, 0);
+        box-shadow: none;}
+    5% {box-shadow: 0 0 55px rgb(255, 81, 81);
+            background: red;}
+}
+@keyframes orangelight {
+    33%,66% {background: orange;
+        box-shadow: none;}
+    40% {box-shadow: 0 0 35px yellow;
+            background: yellow;}
+}
+@keyframes greenlight {
+    66%,99% {background: green;
+        box-shadow: none;}
+    70% {box-shadow: 0 0 35px greenyellow;
+            background: greenyellow;}
+}
+.body-2 div{
+    cursor: pointer;
+}
+.body-2 div.red {
+    transition: all;
+    transition-duration: 1s;
+    transition-timing-function: linear;
+}
+.body-2 .red:active {
+    transition: ease;
+    box-shadow: 0 0 35px rgb(255, 81, 81);
+    background: red;
+    color: red;
+}
+.body-2 div.orange {
+    transition: all;
+    transition-duration: 1s;
+    transition-timing-function: linear;
+}
+.body-2 .orange:active {
+    transition: ease;
+    box-shadow: 0 0 35px yellow;
+    background: yellow;
+    color: yellow;
+}
+.body-2 div.green {
+    transition: all;
+    transition-duration: 1s;
+    transition-timing-function: linear;
+}
+.body-2 .green:active {
+    transition: ease;
+    box-shadow: 0 0 35px yellowgreen;
+    background: yellowgreen;
+    color: yellowgreen;
 }
